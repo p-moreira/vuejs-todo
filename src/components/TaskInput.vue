@@ -1,12 +1,15 @@
 <template>
     <div class="panel task-input">
         <input
+            v-model="taskInput"
             type="text"
             placeholder="O que deseja fazer?"
             @keyup.enter="addTask"
-            v-model="taskInput"
         >
-        <div class="btn-input" @click="addTask()">
+        <div
+            class="btn-input"
+            @click="addTask()"
+        >
             <span>+</span>
         </div>
     </div>
